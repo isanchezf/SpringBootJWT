@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "terpel-gtic-openshift",
+  "private_key_id": "e89af70ab0ebd048f9d82948b607223f6e4dec0b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC4KAQiU8pK1Jts\n2ncSXlHvpE9QH1CcDzajp6jL3c4uG4YsdcI4HPYiD8seynAAHe8tSdbFbnebP9Ne\nOO/QP1tQzXvxSgRoAstL1cgG3OC9Mh6lPGNiQofdd2UmCfivnNusccgwDm4SoKLV\nYAVgJ6NqfHZkL4/aWRkTITJ/4BQ22miWe6qLQigVvN/qqWi1hIC5/RXh+IY0j3Ke\nlP3MFnHZEd0Vfcoazhy42aRmdUVh1Zk4c/DyBSK6PCjcRpzDnOVPx/vxU6luw0TO\ngbLHZPzr764lrgRgF/+W/8T1g9mJauDzPsX5d0WTJrWwJcDzipEQ2/hIZnzpUNRP\nZ6j94nUTAgMBAAECggEACs2o1cKzSV8znFfXSGfpcp+MWkJGs6uzeYz/urCmbySv\njbLS1AE5nJdEmT0oWOQTVfAmU1VpsDKMWdNemN7pTSeLhS+Ma/WjVi2ScHn2DTiq\n0j1lWdcBVXKy/QpKC94DMm3yX9oDhxWOt+nMJu9BskuJk9MJI2FlYS6Utyppb9ZC\nzAwJvUedk4aRytW0FA5t2RCg5pPYREOhpArD5TWjJHgCQ/MBUxDidKdYA794AI1m\n6is9TtZVVGVG0ACWhW8jEPqk6SqZr6TQH8kNj5lw77p7/pHSTtPLGmBFHnw1ymBB\nNAktlQTLPkhJ1EOEwfdl153MRznZkMxeseNPGhDdMQKBgQDZzR5He4uzogavec6y\ngBtpI0+WFRBdT8NvkaBZ/DQ3pptKMYgg+EaQNAC3wRr6Ac6vHAHEiB7S64Pw1SKv\ndaeNUduTVIJUjm2mabDXUn6iXWzQy5CIhrj0T3Dc0nm/xVA1QFoKB+3SPbloiOJ7\nfNKHDCV6BaTy+UjxjEhfmgPz1QKBgQDYdE0nfYiK4cpX8ZNy1wClzhb5LCnj51V+\n4KB6zAIqQP2xp+dIOca0PBrMvsdKLNcNeXprqj7Qtp6dJy+RGp8PRcQ+GV2X2GZT\nM2tskfQI45oZblM6BOleltZGo2rDyXjwktFzIUarddz6/oLnWIXj/zt+gNmLtueP\nEaYUQH4BRwKBgFu74/vxkkangK9Z23AdOu5OfA/XcVwL42HTcTlVW1zxJEjckdxp\nFbdY39CFWepg5n+kiS4QswLdRWYjLwe9w0Nnbdcg6f/ZOV+09lHKoiGaveE3S/nk\n3HOyHfQ0Bil6Xqz/HK1K56T8cGIR/WpLiZRtzj8Vr4LS8iEil70EbpO9AoGAa9lW\n8Aw+UmS6OyNlAl1aN0L+c1yr6qBDGxq1Gzo3AfKr9S7hsD0JYphoCggsqCq7ZD1Y\n3/hNoBS95zO1IamQAz4Rz5c36QarxVzjc48tdphhGba8xTXZSYYCcePOuIrUNZoR\nvjmgSqJJXs4dT0PuQnHTpO5ydojFy6VRiNmxbtUCgYAxlt+Dls2YJrEbztHqrEIM\n+T2nFm4wOH99B7Md6iCS8YVfvdZaw7jd31ZCjRKdsOXC4s/aT4twpfhxWwLn2Gtt\nqIHIZEqT/McwvfIq1EIRQFei+XPmBwdJ4wGOtXKI0czoIHua6gV1RKzoqSQ0wSWO\n/uQ9eXWHZqZxUf6cTBUsyQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "sc-apisrumbo-endpoint-dev@terpel-gtic-openshift.iam.gserviceaccount.com",
+  "client_id": "103299307387413854795",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sc-apisrumbo-endpoint-dev%40terpel-gtic-openshift.iam.gserviceaccount.com"
+}
