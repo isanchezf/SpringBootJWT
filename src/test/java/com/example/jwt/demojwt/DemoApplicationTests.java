@@ -9,24 +9,24 @@ import org.junit.jupiter.api.Test;
 public class DemoApplicationTests {
 
 	@Test()
-	public void GenerateTokenTest(){
+	public void GenerateTokenTest() throws Exception {
 		//Arrange
 		//Action
-		String token = ManagerToken.GenerateToken("IvanSecret");
+		String token = ManagerToken.GenerateToken();
 		//Assert
 		assertTrue(token != null);
 	}
 
-
-
-	@Test()
-	public void DecodeTokenTest() throws Exception {
+		@Test()
+	public void DecodeTokenMethodTwoTest() throws Exception {
 		
 		// Arrange
+		//String token = ManagerToken.GenerateToken();
 		String token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJjbGllbnRlLWRlLWRlc2Fycm9sbG8iLCJzdWIiOiJzYy1hcGlzcnVtYm8tZW5kcG9pbnQtZGV2QHRlcnBlbC1ndGljLW9wZW5zaGlmdC5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImlkZW50aWZpY2Fkb3JBcGxpY2FjaW9uIjoiMTIzNDU2Nzg5IiwiaWRDbGllbnRlIjoiNjQxMzEiLCJpc3MiOiJzYy1hcGlzcnVtYm8tZW5kcG9pbnQtZGV2QHRlcnBlbC1ndGljLW9wZW5zaGlmdC5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInVzdWFyaW8iOiJwaWxvdG8ubGF6byIsImV4cCI6MTU4MDMwNzk1MywiaWF0IjoxNTgwMjIxNTUzLCJlbWFpbCI6InNjLWFwaXNydW1iby1lbmRwb2ludC1kZXZAdGVycGVsLWd0aWMtb3BlbnNoaWZ0LmlhbS5nc2VydmljZWFjY291bnQuY29tIn0.AQ44oPZn1HW4EUhZP6sfAvzu96UB7LUn773mAbYhhGPSiD1gSQLPTYZL-5sDLy01xIueuupNqDUD_lKY55Iy_nvzOI-sruGWaTfaAiBCiYScC7oYHxt4W-1dqzJ20KfoibonMEt0GQ4y8XTQRmTZa3S7ZY5tFraUKXJg5TC1HTWrE9kgfWE3iDuYHhtDzkWJz7vhh3to-8PhCvAdbGxxgianoj-oFGK5QpNi1iZcUclLeV1LvA2WNqOrS73p7jHuBBS-qKnW_ZzKXZVhsUzTDa4ZVeRDmpSNNZ2s6e4TCVqJuRtHY134KZcBt1OfEyQ-ZCGaQQD0Tw6DjrwjITUrWQ";
+		//String token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJjbGllbnRlLWRlLWRlc2Fycm9sbG8iLCJzdWIiOiJzYy1hcGlzcnVtYm8tZW5kcG9pbnQtZGV2QHRlcnBlbC1ndGljLW9wZW5zaGlmdC5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImlkZW50aWZpY2Fkb3JBcGxpY2FjaW9uIjoiMTIzNDU2Nzg5IiwiaWRDbGllbnRlIjoiNjQxMzEiLCJpc3MiOiJzYy1hcGlzcnVtYm8tZW5kcG9pbnQtZGV2QHRlcnBlbC1ndGljLW9wZW5zaGlmdC5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInVzdWFyaW8iOiJwaWxvdG8ucGljYWZ1ZWwiLCJleHAiOjE1ODAzOTg1NzgsImlhdCI6MTU4MDMxMjE3OCwiZW1haWwiOiJzYy1hcGlzcnVtYm8tZW5kcG9pbnQtZGV2QHRlcnBlbC1ndGljLW9wZW5zaGlmdC5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSJ9.cYVkXlSgOb9uMW-VfnbOMmvKi7jts-VET8zmBbHB8qa_lJCogChn3U1_8jLSZsB5cyyE7VEoCJj8rG2MkbBKQBzWMLFB37piVHVY_iuHdgyf3WVbTu0pvJwi-8ZTTq6JdYemA-iJ0qs6SGA_fbEOqdB982cBo6fxBtUO8uJHxRqVbJIyKP0hvxMQibXGGhPLgzLasxQTecQYmG_Zi5C8Kikxh5Wz0ZIZV7cn_BftH-b7c3V_QUC0D00QW0bK5OJwH-cQPvd1y3UjDiIWxtkaFXy8DhGMjq6fjNshuIgmqsM6pREl99o4-h6VG8u4P_uTfr8LWLIqQKxifNqDM_gOFQ";
 
 		// Action
-		Object resultado = ManagerToken.DecodeToken(token);
+		Object resultado = ManagerToken.DecodeTokenMethodTwo(token);
 		
 		// Assertion
 		assertTrue(resultado!=null);
