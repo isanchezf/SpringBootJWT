@@ -22,7 +22,7 @@ import io.jsonwebtoken.Jwts;
 
 public class ManagerToken {
 
-    private static final String CRED_ENDPOINT_CONFIG_MAP_DEV_YAML = "src/main/java/com/example/jwt/demojwt/ServiceAccountCredentials/cred-endpoint.json";
+    private static final String CRED_ENDPOINT_CONFIG_MAP_DEV_YAML = "C:/@GithubIS/ServiceAccountCredentials/cred-endpoint.json";
 
    
     public static String GenerateToken() throws Exception {

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
 
 @Component
 public class AuthorizationFilter extends OncePerRequestFilter {
@@ -34,7 +35,9 @@ public class AuthorizationFilter extends OncePerRequestFilter {
             if (continuar) {
                 filterChain.doFilter(request, response);
             }
-        } catch (Exception e) {
+        }catch(ExpiredJwtException expiredException){
+            response.sendError((int) HttpServletResponse.SC_FORBIDDEN, "Token Expired");
+        }catch (Exception e) {
             response.sendError((int) HttpServletResponse.SC_UNAUTHORIZED, "Unauthorize");
             e.printStackTrace();
         }
@@ -52,6 +55,7 @@ public class AuthorizationFilter extends OncePerRequestFilter {
 
     private Boolean Authorization(final HttpServletRequest request, final HttpServletResponse response)
             throws Exception {
+        
         final Claims claims = ManagerToken.DecodeTokenMethodTwo(JwtToken);
         final String identificadorAplicacionToken = claims.get("identificadorAplicacion", String.class);
         if (identificadorAplicacionToken == null
