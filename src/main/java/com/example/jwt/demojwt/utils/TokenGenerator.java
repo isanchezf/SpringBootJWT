@@ -51,7 +51,7 @@ public class TokenGenerator {
         return privKey;
     }
 
-    private PublicKey GetPublicKeyDecode(String publicKey)
+    private static PublicKey GetPublicKeyDecode(String publicKey)
             throws Exception, NoSuchAlgorithmException, InvalidKeySpecException {
 
         final byte[] buffer = Base64.getDecoder().decode(publicKey);
@@ -76,7 +76,7 @@ public class TokenGenerator {
         return token;
     }
 
-    public Claims DecodeToken(final String jwtToken, final String publicKey) throws Exception {
+    public static Claims DecodeToken(final String jwtToken, final String publicKey) throws Exception {
         PublicKey pub = GetPublicKeyDecode(publicKey);
         return Jwts.parser().setSigningKey(pub).parseClaimsJws(jwtToken).getBody();
     }

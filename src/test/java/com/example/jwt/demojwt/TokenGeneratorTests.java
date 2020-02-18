@@ -37,7 +37,7 @@ public class TokenGeneratorTests {
 		String token = TokenGenerator.generateJwtToken(privateKey);
 
 		// Action
-		Object resultado = tokenGenerator.DecodeToken(token, publicKey);
+		Object resultado = TokenGenerator.DecodeToken(token, publicKey);
 
 		// Assertion
 		assertTrue(resultado != null);

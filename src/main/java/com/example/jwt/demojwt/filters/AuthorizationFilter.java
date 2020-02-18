@@ -5,12 +5,9 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.example.jwt.demojwt.utils.ManagerToken;
-
+import com.example.jwt.demojwt.utils.TokenGenerator;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 
@@ -20,6 +17,7 @@ public class AuthorizationFilter extends OncePerRequestFilter {
     private final String HEADER = "Authorization";
     private final String PREFIX = "Bearer ";
     private final String identificadorAplicacion = "123456789"; // Se debe ingresar el valor del identificador de
+    private final String PUBLIC_KEY = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCfeNZlOOO6BOJbZgs70Rof8yl/nJ4JwIw/T4xnorbYbUL8XqI7v+L5xl8mcXWIyLsiiE/luiE9GAGwcEjNbYGJTbn2fRMX5xmAC7W6zbCHTUVyTM1vwjELMN5c/QGTLgLvBRJyIONOQHPZK/B/2AEyvphRg3mVbieGskPWCX898QIDAQAB";
     private String JwtToken = ""; // aplicación generado
 
     @Override
@@ -55,11 +53,16 @@ public class AuthorizationFilter extends OncePerRequestFilter {
 
     private Boolean Authorization(final HttpServletRequest request, final HttpServletResponse response)
             throws Exception {
-        
-        final Claims claims = ManagerToken.DecodeTokenMethodTwo(JwtToken);
-        final String identificadorAplicacionToken = claims.get("identificadorAplicacion", String.class);
-        if (identificadorAplicacionToken == null
-                || !identificadorAplicacionToken.equalsIgnoreCase(identificadorAplicacion)) {
+
+        // final Claims claims = ManagerToken.DecodeTokenMethodTwo(JwtToken);
+        final Claims claims = TokenGenerator.DecodeToken(JwtToken, PUBLIC_KEY);
+        //final String identificadorAplicacionToken = claims.get("identificadorAplicacion", String.class);
+        // if (identificadorAplicacionToken == null
+        //         || !identificadorAplicacionToken.equalsIgnoreCase(identificadorAplicacion)) {
+        //     response.sendError((int) HttpServletResponse.SC_UNAUTHORIZED, "Unauthorize");
+        //     return false;
+        // }
+        if (claims == null) {
             response.sendError((int) HttpServletResponse.SC_UNAUTHORIZED, "Unauthorize");
             return false;
         }
