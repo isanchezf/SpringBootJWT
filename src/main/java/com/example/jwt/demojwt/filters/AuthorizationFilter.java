@@ -1,14 +1,11 @@
 package com.example.jwt.demojwt.filters;
 
 import java.io.IOException;
-import java.util.Map;
-
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.auth0.jwt.interfaces.Claim;
 import com.example.jwt.demojwt.utils.ManagerToken;
 
 import org.springframework.stereotype.Component;
@@ -50,6 +47,9 @@ public class AuthorizationFilter extends OncePerRequestFilter {
             return false;
         }
         JwtToken = request.getHeader(HEADER).replace(PREFIX, "");
+        JwtToken = JwtToken.replace(PREFIX.toLowerCase(), "");
+        JwtToken = JwtToken.replace(PREFIX.toUpperCase(), "");
+
         return true;
     }
 
